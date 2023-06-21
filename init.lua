@@ -1,0 +1,2 @@
+require("grandy")
+print("hello")
