@@ -1,2 +1,3 @@
-require("grandy")
-print("hello")
+require('user.keymaps')
+require('user.packer')
+require('user.set')

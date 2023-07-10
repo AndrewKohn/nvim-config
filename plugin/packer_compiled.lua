@@ -84,21 +84,36 @@ _G.packer_plugins = {
     path = "/home/kohn/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
+  ["codi.vim"] = {
+    loaded = true,
+    path = "/home/kohn/.local/share/nvim/site/pack/packer/start/codi.vim",
+    url = "https://github.com/metakirby5/codi.vim"
+  },
   harpoon = {
     loaded = true,
     path = "/home/kohn/.local/share/nvim/site/pack/packer/start/harpoon",
-    url = "https://github.com/theprimeagen/harpoon"
+    url = "https://github.com/ThePrimeagen/harpoon"
   },
-  kanagawa = {
-    config = { "\27LJ\2\2?\0\0\2\0\3\0\0056\0\0\0009\0\1\0'\1\2\0B\0\2\1K\0\1\0 colorscheme kanagawa-dragon\bcmd\bvim\0" },
+  ["indent-blankline.nvim"] = {
     loaded = true,
-    path = "/home/kohn/.local/share/nvim/site/pack/packer/start/kanagawa",
+    path = "/home/kohn/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
+    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
+  },
+  ["kanagawa.nvim"] = {
+    config = { "\27LJ\2\2C\0\0\2\0\4\0\0066\0\0\0009\0\1\0009\0\2\0'\1\3\0B\0\2\1K\0\1\0\20kanagawa-dragon\16colorscheme\bcmd\bvim\0" },
+    loaded = true,
+    path = "/home/kohn/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
     url = "https://github.com/rebelot/kanagawa.nvim"
   },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/home/kohn/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
     url = "https://github.com/VonHeikemen/lsp-zero.nvim"
+  },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/home/kohn/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
   },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
@@ -110,10 +125,30 @@ _G.packer_plugins = {
     path = "/home/kohn/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  ["modes.nvim"] = {
+    loaded = true,
+    path = "/home/kohn/.local/share/nvim/site/pack/packer/start/modes.nvim",
+    url = "https://github.com/mvllow/modes.nvim"
+  },
+  moonfly = {
+    loaded = true,
+    path = "/home/kohn/.local/share/nvim/site/pack/packer/start/moonfly",
+    url = "https://github.com/bluz71/vim-moonfly-colors"
+  },
+  ["neoscroll.nvim"] = {
+    loaded = true,
+    path = "/home/kohn/.local/share/nvim/site/pack/packer/start/neoscroll.nvim",
+    url = "https://github.com/karb94/neoscroll.nvim"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/home/kohn/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
+  },
+  ["nvim-colorizer.lua"] = {
+    loaded = true,
+    path = "/home/kohn/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
+    url = "https://github.com/norcalli/nvim-colorizer.lua"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -124,6 +159,12 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/kohn/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
+  ["nvim-web-devicons"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/kohn/.local/share/nvim/site/pack/packer/opt/nvim-web-devicons",
+    url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -158,10 +199,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: kanagawa
-time([[Config for kanagawa]], true)
-try_loadstring("\27LJ\2\2?\0\0\2\0\3\0\0056\0\0\0009\0\1\0'\1\2\0B\0\2\1K\0\1\0 colorscheme kanagawa-dragon\bcmd\bvim\0", "config", "kanagawa")
-time([[Config for kanagawa]], false)
+-- Config for: kanagawa.nvim
+time([[Config for kanagawa.nvim]], true)
+try_loadstring("\27LJ\2\2C\0\0\2\0\4\0\0066\0\0\0009\0\1\0009\0\2\0'\1\3\0B\0\2\1K\0\1\0\20kanagawa-dragon\16colorscheme\bcmd\bvim\0", "config", "kanagawa.nvim")
+time([[Config for kanagawa.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

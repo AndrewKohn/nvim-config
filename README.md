@@ -1,19 +1,13 @@
 # nvim-config
 
-My config files for building up neovim v0.10.0-dev. Currently a work-in-progress as I eventually make nvim my daily driver.
+![nvim config img](./nvim-config.png)
 
----
+#
 
-### Utilizing Packer
+colorscheme: kanagawa-dragon
 
-- telescope
-- treesitter
-- playground
-- harpoon
-- undotree
-- vim-fugutive
-- lsp-zero
+lualine/modes: moonfly
 
-### Color Scheme:
+### To-Do
 
-rebelot/kanagawa -> kanagawa-dragon
+lsp, cmp, surround, etc...
