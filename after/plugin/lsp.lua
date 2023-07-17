@@ -1,37 +1,43 @@
+require('mason').setup()
+require('mason-lspconfig').setup()
+
 local lsp = require('lsp-zero').preset({})
+lsp.extend_cmp()
 
 lsp.on_attach(function(client, bufnr)
-  lsp.default_keymaps({buffer = bufnr})
+    -- )
+    lsp.default_keymaps({buffer = bufnr})
 end)
 
-lsp.preset('recommend')
-
-lsp.ensure_installed({
-  -- Replace these with whatever servers you want to install
-  'tsserver',
-  'eslint',
-  'rust_analyzer',
-  'jdtls',
-  'html',
-  'cssls',
-  'jsonls',
-  'sqlls',
-  'pyright',
+lsp.set_sign_icons({
+  error = '✘',
+  warn = '▲',
+  hint = '⚑',
+  info = '»'
 })
 
--- setup language servers
-local lspConfig = require('lspconfig')
-lspConfig.lua_ls.setup(lsp.nvim_lua_ls())
-lspConfig.pyright.setup{}
-lspConfig.tsserver.setup({
-    on_attach = lsp.on_attach,
-    root_dir = lspConfig.util.root_pattern('package.json', 'tsconfig.json', 'jsconfig.json', '.git'),
-})
--- lspConfig.jdtls.setup{}
--- lspConfig.html.setup{}
--- lspConfig.cssls.setup{}
--- lspConfig.jsonls.setup{}
--- lspConfig.sqlls.setup{}
--- lspConfig.rust_analyzer.setup{}
-
+-- TODO: tsserver, jdtls, etc...
+require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
+require('lspconfig').tsserver.setup({})
 lsp.setup()
+
+-- CMP
+local cmp = require('cmp')
+local cmp_action = require('lsp-zero').cmp_action()
+local cmp_select = { behavior = cmp.SelectBehavior.Select }
+
+cmp.setup({
+    window = {
+        completion = cmp.config.window.bordered(),
+        documentation = cmp.config.window.bordered(),
+    },
+        completion = {
+        autocomplete = false
+    },
+    mapping = {
+        ['<S-Tab>'] = cmp.mapping.select_prev_item(cmp_select),
+        ['<Tab>'] = cmp.mapping.select_next_item(cmp_select),
+        ['<Enter>'] = cmp.mapping.confirm({select = true}),
+        ['<C-Space>'] = cmp.mapping.complete(),
+    }
+})

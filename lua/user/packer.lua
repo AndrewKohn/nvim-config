@@ -43,7 +43,7 @@ return require('packer').startup(function(use)
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
     use 'lukas-reineke/indent-blankline.nvim'
-    use 'metakirby5/codi.vim'
+    -- use 'metakirby5/codi.vim'    -- neat, but only js interpreter works?
     use 'karb94/neoscroll.nvim'
     use { "bluz71/vim-moonfly-colors", as = "moonfly" }
     use({
@@ -51,5 +51,20 @@ return require('packer').startup(function(use)
         tag = 'v0.2.0',
     })
     use 'norcalli/nvim-colorizer.lua'
-
-  end)
+    use {
+        'nvim-tree/nvim-tree.lua',
+        requires = {
+            'nvim-tree/nvim-web-devicons', -- optional
+        },
+    }
+    use({
+        "j-hui/fidget.nvim",
+        config = function()
+            require("fidget").setup()
+        end,
+        tag = "legacy",
+        requires = { "neovim/nvim-lspconfig" }
+    })
+    use 'folke/trouble.nvim'
+    use 'folke/todo-comments.nvim'
+end)

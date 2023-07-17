@@ -84,10 +84,11 @@ _G.packer_plugins = {
     path = "/home/kohn/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
-  ["codi.vim"] = {
+  ["fidget.nvim"] = {
+    config = { "\27LJ\2\0024\0\0\2\0\3\0\0066\0\0\0'\1\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\vfidget\frequire\0" },
     loaded = true,
-    path = "/home/kohn/.local/share/nvim/site/pack/packer/start/codi.vim",
-    url = "https://github.com/metakirby5/codi.vim"
+    path = "/home/kohn/.local/share/nvim/site/pack/packer/start/fidget.nvim",
+    url = "https://github.com/j-hui/fidget.nvim"
   },
   harpoon = {
     loaded = true,
@@ -155,6 +156,11 @@ _G.packer_plugins = {
     path = "/home/kohn/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
+  ["nvim-tree.lua"] = {
+    loaded = true,
+    path = "/home/kohn/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
+    url = "https://github.com/nvim-tree/nvim-tree.lua"
+  },
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/home/kohn/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
@@ -186,6 +192,16 @@ _G.packer_plugins = {
     path = "/home/kohn/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["todo-comments.nvim"] = {
+    loaded = true,
+    path = "/home/kohn/.local/share/nvim/site/pack/packer/start/todo-comments.nvim",
+    url = "https://github.com/folke/todo-comments.nvim"
+  },
+  ["trouble.nvim"] = {
+    loaded = true,
+    path = "/home/kohn/.local/share/nvim/site/pack/packer/start/trouble.nvim",
+    url = "https://github.com/folke/trouble.nvim"
+  },
   undotree = {
     loaded = true,
     path = "/home/kohn/.local/share/nvim/site/pack/packer/start/undotree",
@@ -203,6 +219,10 @@ time([[Defining packer_plugins]], false)
 time([[Config for kanagawa.nvim]], true)
 try_loadstring("\27LJ\2\2C\0\0\2\0\4\0\0066\0\0\0009\0\1\0009\0\2\0'\1\3\0B\0\2\1K\0\1\0\20kanagawa-dragon\16colorscheme\bcmd\bvim\0", "config", "kanagawa.nvim")
 time([[Config for kanagawa.nvim]], false)
+-- Config for: fidget.nvim
+time([[Config for fidget.nvim]], true)
+try_loadstring("\27LJ\2\0024\0\0\2\0\3\0\0066\0\0\0'\1\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\vfidget\frequire\0", "config", "fidget.nvim")
+time([[Config for fidget.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

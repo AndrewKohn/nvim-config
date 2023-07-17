@@ -5,8 +5,8 @@
 #
 
 colorscheme: kanagawa-dragon
-
 lualine/modes: moonfly
+Nerd hack font for nvim-tree icons to correctly show
 
 ### To-Do
 

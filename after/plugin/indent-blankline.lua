@@ -4,12 +4,12 @@ vim.cmd [[highlight IndentBlanklineIndent2 guifg=#4C494A guibg=#1A1919 gui=nocom
 
 -- listchars
 vim.opt.listchars:append({ tab = '▶‒' })
-vim.opt.listchars:append({ lead = '…' })
+-- vim.opt.listchars:append({ lead = '…' })
 vim.opt.listchars:append({ trail = '·' })
 vim.opt.listchars:append({ nbsp = '␣' })
 vim.opt.listchars:append({ extends = '❯' })
 vim.opt.listchars:append({ precedes = '❮' })
-vim.opt.listchars:append({ eol = '¬' })
+-- vim.opt.listchars:append({ eol = '¬' })
 
 require('indent_blankline').setup {
 	char = '┊',
