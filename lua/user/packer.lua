@@ -57,14 +57,43 @@ return require('packer').startup(function(use)
             'nvim-tree/nvim-web-devicons', -- optional
         },
     }
-    use({
+    use ({
         "j-hui/fidget.nvim",
+        --tag = "legacy",
         config = function()
             require("fidget").setup()
         end,
-        tag = "legacy",
-        requires = { "neovim/nvim-lspconfig" }
+        -- requires = { "neovim/nvim-lspconfig" }
     })
     use 'folke/trouble.nvim'
     use 'folke/todo-comments.nvim'
+    use ({
+        'folke/zen-mode.nvim',
+        config = function()
+            require("zen-mode").setup {
+                window = {
+                    backdrop = 0.95,
+                    width = 0.85,
+                    height = 0.95,
+                    options = {
+                        number = false,
+                        relativenumber = false,
+                    },
+                }
+            }
+        end
+    })
+    use 'folke/twilight.nvim'
+    use ({
+        'ms-jpq/coq_nvim',
+        branch = 'coq',
+    })
+    use ({
+        'ms-jpq/coq.artifacts',
+        branch = 'artifacts',
+    })
+    use ({
+        'ms-jpq/coq.thirdparty',
+        branch = '3p',
+    })
 end)
