@@ -4,10 +4,11 @@
 
 #
 
-colorscheme: kanagawa-dragon
-lualine/modes: moonfly
-Nerd hack font for nvim-tree icons to correctly show
+Utilizing nvim v0.10 w/ packer
 
-### To-Do
+#
+- colorscheme: kanagawa-dragon
 
-lsp, cmp, surround, etc...
+- lualine/modes: moonfly
+
+- Nerd hack font must be downloaded for nvim-tree icons to correctly show
