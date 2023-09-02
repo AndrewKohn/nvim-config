@@ -84,8 +84,23 @@ _G.packer_plugins = {
     path = "/home/kohn/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
+  ["coq.artifacts"] = {
+    loaded = true,
+    path = "/home/kohn/.local/share/nvim/site/pack/packer/start/coq.artifacts",
+    url = "https://github.com/ms-jpq/coq.artifacts"
+  },
+  ["coq.thirdparty"] = {
+    loaded = true,
+    path = "/home/kohn/.local/share/nvim/site/pack/packer/start/coq.thirdparty",
+    url = "https://github.com/ms-jpq/coq.thirdparty"
+  },
+  coq_nvim = {
+    loaded = true,
+    path = "/home/kohn/.local/share/nvim/site/pack/packer/start/coq_nvim",
+    url = "https://github.com/ms-jpq/coq_nvim"
+  },
   ["fidget.nvim"] = {
-    config = { "\27LJ\2\0024\0\0\2\0\3\0\0066\0\0\0'\1\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\vfidget\frequire\0" },
+    config = { "\27LJ\2\n4\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\vfidget\frequire\0" },
     loaded = true,
     path = "/home/kohn/.local/share/nvim/site/pack/packer/start/fidget.nvim",
     url = "https://github.com/j-hui/fidget.nvim"
@@ -101,7 +116,7 @@ _G.packer_plugins = {
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
   ["kanagawa.nvim"] = {
-    config = { "\27LJ\2\2C\0\0\2\0\4\0\0066\0\0\0009\0\1\0009\0\2\0'\1\3\0B\0\2\1K\0\1\0\20kanagawa-dragon\16colorscheme\bcmd\bvim\0" },
+    config = { "\27LJ\2\nC\0\0\3\0\4\0\0066\0\0\0009\0\1\0009\0\2\0'\2\3\0B\0\2\1K\0\1\0\20kanagawa-dragon\16colorscheme\bcmd\bvim\0" },
     loaded = true,
     path = "/home/kohn/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
     url = "https://github.com/rebelot/kanagawa.nvim"
@@ -202,6 +217,11 @@ _G.packer_plugins = {
     path = "/home/kohn/.local/share/nvim/site/pack/packer/start/trouble.nvim",
     url = "https://github.com/folke/trouble.nvim"
   },
+  ["twilight.nvim"] = {
+    loaded = true,
+    path = "/home/kohn/.local/share/nvim/site/pack/packer/start/twilight.nvim",
+    url = "https://github.com/folke/twilight.nvim"
+  },
   undotree = {
     loaded = true,
     path = "/home/kohn/.local/share/nvim/site/pack/packer/start/undotree",
@@ -211,17 +231,27 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/kohn/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
+  },
+  ["zen-mode.nvim"] = {
+    config = { "\27LJ\2\n±\1\0\0\5\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\6\0005\3\3\0005\4\4\0=\4\5\3=\3\a\2B\0\2\1K\0\1\0\vwindow\1\0\0\foptions\1\0\2\19relativenumber\1\vnumber\1\1\0\3\rbackdrop\4æÌ™³\6æÌ¹ÿ\3\nwidth\4³æÌ™\3³æ¬ÿ\3\vheight\4æÌ™³\6æÌ¹ÿ\3\nsetup\rzen-mode\frequire\0" },
+    loaded = true,
+    path = "/home/kohn/.local/share/nvim/site/pack/packer/start/zen-mode.nvim",
+    url = "https://github.com/folke/zen-mode.nvim"
   }
 }
 
 time([[Defining packer_plugins]], false)
 -- Config for: kanagawa.nvim
 time([[Config for kanagawa.nvim]], true)
-try_loadstring("\27LJ\2\2C\0\0\2\0\4\0\0066\0\0\0009\0\1\0009\0\2\0'\1\3\0B\0\2\1K\0\1\0\20kanagawa-dragon\16colorscheme\bcmd\bvim\0", "config", "kanagawa.nvim")
+try_loadstring("\27LJ\2\nC\0\0\3\0\4\0\0066\0\0\0009\0\1\0009\0\2\0'\2\3\0B\0\2\1K\0\1\0\20kanagawa-dragon\16colorscheme\bcmd\bvim\0", "config", "kanagawa.nvim")
 time([[Config for kanagawa.nvim]], false)
+-- Config for: zen-mode.nvim
+time([[Config for zen-mode.nvim]], true)
+try_loadstring("\27LJ\2\n±\1\0\0\5\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\6\0005\3\3\0005\4\4\0=\4\5\3=\3\a\2B\0\2\1K\0\1\0\vwindow\1\0\0\foptions\1\0\2\19relativenumber\1\vnumber\1\1\0\3\rbackdrop\4æÌ™³\6æÌ¹ÿ\3\nwidth\4³æÌ™\3³æ¬ÿ\3\vheight\4æÌ™³\6æÌ¹ÿ\3\nsetup\rzen-mode\frequire\0", "config", "zen-mode.nvim")
+time([[Config for zen-mode.nvim]], false)
 -- Config for: fidget.nvim
 time([[Config for fidget.nvim]], true)
-try_loadstring("\27LJ\2\0024\0\0\2\0\3\0\0066\0\0\0'\1\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\vfidget\frequire\0", "config", "fidget.nvim")
+try_loadstring("\27LJ\2\n4\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\vfidget\frequire\0", "config", "fidget.nvim")
 time([[Config for fidget.nvim]], false)
 
 _G._packer.inside_compile = false
