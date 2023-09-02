@@ -50,3 +50,7 @@ t['<C-[>'] = {'scroll', {'-vim.wo.scroll', 'true', '250'}}
 t['<C-]>'] = {'scroll', { 'vim.wo.scroll', 'true', '250'}}
 
 require('neoscroll.config').set_mappings(t)
+
+
+-- zen-mode
+vim.keymap.set("n", "<leader>zm", vim.cmd.ZenMode)
