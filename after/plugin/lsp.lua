@@ -2,8 +2,9 @@ require('mason').setup()
 require('mason-lspconfig').setup()
 
 local lsp = require('lsp-zero').preset({})
-lsp.extend_cmp()
+local coq = require('coq')
 
+lsp.extend_cmp()
 lsp.on_attach(function(client, bufnr)
     -- )
     lsp.default_keymaps({buffer = bufnr})
@@ -18,7 +19,8 @@ lsp.set_sign_icons({
 
 -- TODO: tsserver, jdtls, etc...
 require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
-require('lspconfig').tsserver.setup({})
+require('lspconfig').tsserver.setup{}
+--require('lspconfig').tsserver.setup(coq.lsp_ensure_capabilities{})
 lsp.setup()
 
 -- CMP
