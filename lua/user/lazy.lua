@@ -143,7 +143,9 @@ require("lazy").setup({
   { 'karb94/neoscroll.nvim' },
 
   -- indent-blankline
-  { 'lukas-reineke/indent-blankline.nvim' },
+  { 'lukas-reineke/indent-blankline.nvim', version = 'v2.20.8' },
+  -- v3
+  --{ "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
 
   -- undotree
   { 'mbbill/undotree' },
