@@ -16,7 +16,7 @@ local colors = {
 local customMoonflyTheme = {
   replace = {
     a = { fg = colors.black, bg = colors.rosePink, gui = 'bold' },
-    b = { fg = colors.silver, bg = colors.black },
+    b = { fg = colors.rosePink, bg = colors.black },
   },
   inactive = {
     a = { fg = colors.grey, bg = colors.jetGrey, gui = 'bold' },
@@ -25,12 +25,12 @@ local customMoonflyTheme = {
   },
   normal = {
     a = { fg = colors.black, bg = colors.skyBlue, gui = 'bold' },
-    b = { fg = colors.grey, bg = colors.black },
-    c = { fg = colors.error, bg = colors.jetGrey },
+    b = { fg = colors.skyBlue, bg = colors.black },
+    c = { fg = colors.silver, bg = colors.jetGrey },
   },
   visual = {
     a = { fg = colors.black, bg = colors.indigo, gui = 'bold' },
-    b = { fg = colors.silver, bg = colors.black },
+    b = { fg = colors.indigo, bg = colors.black },
   },
   insert = {
     a = { fg = colors.black, bg = colors.silver, gui = 'bold' },
@@ -38,7 +38,7 @@ local customMoonflyTheme = {
   },
   command = {
     a = { fg = colors.black, bg = colors.yellowGold, gui = 'bold' },
-    b = { fg = colors.silver, bg = colors.black },
+    b = { fg = colors.yellowGold, bg = colors.black },
   },
 }
 
@@ -93,15 +93,18 @@ require('lualine').setup {
   options = {
     icons_enabled = true,
     theme = customMoonflyTheme,
-    component_separators = '|',
-    section_separators = { left = '', right = '' },
   },
   sections = process_sections {
     lualine_a = { 'mode' },
     lualine_b = {
       'branch',
-      { 'filename', file_status = false,          path = 1 },
-      { modified,   color = { fg = colors.error } },
+      {
+        'filename',
+        file_status = false,
+        path = 1,
+        color = { fg = colors.silver }
+      },
+      { modified, color = { fg = colors.error, gui = 'bold' } },
       {
         '%w',
         cond = function()
@@ -149,7 +152,8 @@ require('lualine').setup {
         diagnostics_color = { hint = { bg = colors.black, fg = colors.hint } },
       },
       'diff',
-      search_result, 'filetype' },
+      search_result,
+      { 'filetype', color = { fg = colors.silver } } },
     lualine_z = { '%l:%c', '%p%%/%L' },
   },
   inactive_sections = {
