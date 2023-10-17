@@ -158,4 +158,7 @@ require("lazy").setup({
 
   -- fugitive
   { 'tpope/vim-fugitive' },
+
+  -- autoclose
+  { 'm4xshen/autoclose.nvim' },
 })
