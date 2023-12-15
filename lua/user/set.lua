@@ -5,7 +5,6 @@ vim.opt.incsearch = true
 -- Make line numbers default
 vim.wo.number = true
 vim.opt.relativenumber = true
-vim.opt.colorcolumn = "80"
 
 -- indentations
 vim.opt.tabstop = 4
@@ -22,3 +21,12 @@ vim.opt.signcolumn = "yes"
 
 -- clipboard
 vim.o.clipboard = 'unnamedplus'
+
+-- for deadcolumn plugin    |   Add filetype else colorcolumn won't show
+vim.opt.colorcolumn = "80"
+vim.cmd [[
+augroup CustomColorColumn
+  autocmd!
+  autocmd FileType javascript,java,rust,python set colorcolumn=80
+augroup END
+]]
