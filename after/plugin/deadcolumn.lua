@@ -10,9 +10,9 @@ local opts = {
         },
     },
     warning = {
-        alpha = 0.4,
+        alpha = 0.2,
         offset = 0,
-        colorcode = '#FF0000',
+        colorcode = '#520000',
         hlgroup = {
             'Error',
             'background',
