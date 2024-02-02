@@ -27,6 +27,6 @@ vim.opt.colorcolumn = "80"
 vim.cmd [[
 augroup CustomColorColumn
   autocmd!
-  autocmd FileType javascript,java,rust,python set colorcolumn=80
+  autocmd FileType javascript,java,rust,python,typescriptreact set colorcolumn=80
 augroup END
 ]]
