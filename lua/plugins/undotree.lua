@@ -1,3 +1,4 @@
 -- undotree
+-- undo history visualizer
 
-return { 'mbbill/undotree' }
+return { "mbbill/undotree" }

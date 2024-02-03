@@ -1,3 +1,5 @@
 -- fugitive
+-- git gud
+-- git plugin for vim
 
-return { 'tpope/vim-fugitive' }
+return { "tpope/vim-fugitive" }

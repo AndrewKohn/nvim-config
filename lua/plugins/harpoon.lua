@@ -3,4 +3,4 @@
 -- <C-e> :  menu
 -- alt 1-4 to access top 4 files in list
 
-return { 'ThePrimeagen/harpoon' }
+return { "ThePrimeagen/harpoon" }

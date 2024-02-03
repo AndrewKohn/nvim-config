@@ -20,13 +20,13 @@ vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
 
 -- clipboard
-vim.o.clipboard = 'unnamedplus'
+vim.o.clipboard = "unnamedplus"
 
 -- for deadcolumn plugin    |   Add filetype else colorcolumn won't show
 vim.opt.colorcolumn = "80"
-vim.cmd [[
+vim.cmd([[
 augroup CustomColorColumn
   autocmd!
   autocmd FileType javascript,java,rust,python,typescriptreact set colorcolumn=80
 augroup END
-]]
+]])
