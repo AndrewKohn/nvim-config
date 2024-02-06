@@ -11,6 +11,8 @@ vim.keymap.set("n", "<C-p>", builtin.git_files, {})
 vim.keymap.set("n", "<leader>ps", function()
 	builtin.grep_string({ search = vim.fn.input("Grep > ") })
 end)
+vim.keymap.set("n", "<leader>ph", builtin.help_tags, {})
+vim.keymap.set("n", "<leader>pb", builtin.buffers, {})
 
 -----------------------------------------------------------
 -- harpoon
@@ -88,6 +90,19 @@ vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
 
 -----------------------------------------------------------
 -- none-ls (null-ls)
-
 vim.keymap.set("n", "gf", vim.lsp.buf.format, {})
+
+-----------------------------------------------------------
+-- noice
+local noice = require("noice")
+
+vim.keymap.set("n", "<leader>nh", function()
+	noice.cmd("history")
+end, { desc = "Noice History" })
+vim.keymap.set("n", "<leader>nl", function()
+	noice.cmd("last")
+end, { desc = "Noice Last message" })
+vim.keymap.set("n", "<leader>na", function()
+	noice.cmd("all")
+end, { desc = "Noice All" })
 -----------------------------------------------------------
