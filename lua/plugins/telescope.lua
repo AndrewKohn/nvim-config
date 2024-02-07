@@ -11,7 +11,7 @@ return {
 		dependencies = { "nvim-lua/plenary.nvim" },
 		opts = {
 			defaults = {
-				prompt_prefix = " ",
+				prompt_prefix = "   ",
 				selection_caret = " ",
 				path_display = { "smart" },
 				sorting_strategy = "ascending",
