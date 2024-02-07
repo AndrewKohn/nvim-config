@@ -2,7 +2,6 @@
 -- alternative file explorer
 -- netrw is disabled
 -- Hack Nerd Font should be set as terminal font
--- TODO: change diag. icons to utf icons
 
 return {
 	"nvim-tree/nvim-tree.lua",
@@ -21,9 +20,12 @@ return {
 			update_cwd = true,
 		},
 		renderer = {
+			add_trailing = true,
+			--highlight_opened_files = "name",
+			--highlight_git = true,
 			indent_width = 2,
 			indent_markers = {
-				enable = false,
+				enable = true,
 				inline_arrows = true,
 				icons = {
 					corner = "└",
@@ -34,7 +36,11 @@ return {
 				},
 			},
 			icons = {
+				git_placement = "signcolumn",
+				modified_placement = "before",
+				show = { modified = true },
 				glyphs = {
+					modified = "●",
 					symlink = "",
 					folder = {
 						arrow_open = "",
@@ -47,11 +53,11 @@ return {
 						symlink_open = "",
 					},
 					git = {
-						unstaged = "✗",
+						unstaged = "ϟ",
 						staged = "✓",
 						unmerged = "",
 						renamed = "➜",
-						untracked = "U",
+						untracked = "?",
 						deleted = "",
 						ignored = "◌",
 					},
@@ -66,8 +72,9 @@ return {
 			custom = { "^.git$", "^node_modules$" },
 		},
 		git = {
-			enable = false,
+			enable = true,
 		},
+		modified = { enable = true },
 		log = {
 			enable = true,
 			types = {
