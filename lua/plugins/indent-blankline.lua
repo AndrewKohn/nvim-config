@@ -36,6 +36,7 @@ return {
 				},
 				scope = {
 					enabled = true,
+					char = "│",
 					highlight = "focus",
 				},
 				whitespace = {
