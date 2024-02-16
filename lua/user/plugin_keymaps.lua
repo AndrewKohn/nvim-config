@@ -1,3 +1,8 @@
+-- NOTE:
+-- Keymaps placed here may not necessarily use plugin-specific commands.
+-- Even if it's a global setting, the keymap/setting at least shows some
+-- reference and/or relation to the plugin.
+
 -----------------------------------------------------------
 -- nvim-tree
 vim.g.loaded_netrw = 1
@@ -6,13 +11,14 @@ vim.g.loaded_netrwPlugin = 1
 -----------------------------------------------------------
 -- telescope
 local builtin = require("telescope.builtin")
-vim.keymap.set("n", "<leader>pf", builtin.find_files, {})
+vim.keymap.set("n", "<leader>pf", builtin.find_files)
 vim.keymap.set("n", "<C-p>", builtin.git_files, {})
 vim.keymap.set("n", "<leader>ps", function()
 	builtin.grep_string({ search = vim.fn.input("Grep > ") })
 end)
 vim.keymap.set("n", "<leader>ph", builtin.help_tags, {})
 vim.keymap.set("n", "<leader>pb", builtin.buffers, {})
+vim.keymap.set("n", "<leader>pm", ":Telescope harpoon marks<CR>", {})
 
 -----------------------------------------------------------
 -- harpoon
@@ -83,16 +89,6 @@ t["<C-]>"] = { "scroll", { "vim.wo.scroll", "true", "250" } }
 require("neoscroll.config").set_mappings(t)
 
 -----------------------------------------------------------
--- lsp-config
-vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
-vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
-
------------------------------------------------------------
--- none-ls (null-ls)
-vim.keymap.set("n", "gf", vim.lsp.buf.format, {})
-
------------------------------------------------------------
 -- noice
 local noice = require("noice")
 
@@ -105,4 +101,25 @@ end, { desc = "Noice Last message" })
 vim.keymap.set("n", "<leader>na", function()
 	noice.cmd("all")
 end, { desc = "Noice All" })
+
+-----------------------------------------------------------
+-- gitsigns
+vim.keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", {
+	desc = "Gitsigns preview hunk",
+})
+vim.keymap.set("n", "<leader>gb", ":Gitsigns toggle_current_line_blame<CR>", {
+	desc = "Gitsigns toggle blame current line",
+})
+
+-----------------------------------------------------------
+-- none-ls (null-ls)
+vim.keymap.set("n", "ff", vim.lsp.buf.format, {
+	desc = "format file",
+})
+
+-----------------------------------------------------------
+-- pretty_hover
+vim.keymap.set("n", "K", function()
+	require("pretty_hover").hover()
+end, { desc = "pretty_hover hover" })
 -----------------------------------------------------------

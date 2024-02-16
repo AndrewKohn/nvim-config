@@ -20,7 +20,7 @@ vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
 
 -- clipboard
-vim.o.clipboard = "unnamedplus"
+vim.opt.clipboard:append({ "unnamed", "unnamedplus" })
 
 -- for deadcolumn plugin    |   Add filetype else colorcolumn won't show
 vim.opt.colorcolumn = "80"
