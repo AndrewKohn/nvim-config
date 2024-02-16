@@ -20,6 +20,7 @@ return {
 	config = function()
 		local lsp_zero = require("lsp-zero")
 		local lsp_config = require("lspconfig")
+		require("luasnip.loaders.from_vscode").lazy_load()
 
 		local servers = {
 			"cssls",

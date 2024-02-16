@@ -29,6 +29,7 @@ return {
 
 			telescope.setup(opts)
 			telescope.load_extension("harpoon")
+			telescope.load_extension("noice")
 		end,
 	},
 }
