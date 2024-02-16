@@ -19,6 +19,7 @@ end)
 vim.keymap.set("n", "<leader>ph", builtin.help_tags, {})
 vim.keymap.set("n", "<leader>pb", builtin.buffers, {})
 vim.keymap.set("n", "<leader>pm", ":Telescope harpoon marks<CR>", {})
+vim.keymap.set("n", "<leader>pn", ":Telescope noice<CR>", {})
 
 -----------------------------------------------------------
 -- harpoon
@@ -89,20 +90,6 @@ t["<C-]>"] = { "scroll", { "vim.wo.scroll", "true", "250" } }
 require("neoscroll.config").set_mappings(t)
 
 -----------------------------------------------------------
--- noice
-local noice = require("noice")
-
-vim.keymap.set("n", "<leader>nh", function()
-	noice.cmd("history")
-end, { desc = "Noice History" })
-vim.keymap.set("n", "<leader>nl", function()
-	noice.cmd("last")
-end, { desc = "Noice Last message" })
-vim.keymap.set("n", "<leader>na", function()
-	noice.cmd("all")
-end, { desc = "Noice All" })
-
------------------------------------------------------------
 -- gitsigns
 vim.keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", {
 	desc = "Gitsigns preview hunk",
@@ -122,4 +109,11 @@ vim.keymap.set("n", "ff", vim.lsp.buf.format, {
 vim.keymap.set("n", "K", function()
 	require("pretty_hover").hover()
 end, { desc = "pretty_hover hover" })
+
+-----------------------------------------------------------
+-- comment
+-- NOTE: <C-_> = ctrl + /
+vim.api.nvim_set_keymap("n", "<C-_>", "gcc", { noremap = false })
+vim.api.nvim_set_keymap("v", "<C-_>", "gc", { noremap = false })
+
 -----------------------------------------------------------
