@@ -1,6 +1,6 @@
 # nvim-config
 
-![nvim screenshot1]("./images/Screenshot from 2024-02-18 18-34-15.png")
+![nvim screenshot1](https://github.com/AndrewKohn/nvim-config/blob/main/images/Screenshot%20from%202024-02-18%2018-34-15.png)
 
 ### Table of Contents
 
@@ -96,6 +96,6 @@ Plugins may have dependencies that will be automatically downloaded in order to 
 
 ## Showcase
 
-![Nvim screenshot2]("./images/Screenshot from 2024-02-18 18-34-57.png")
-![Nvim screenshot3]("./images/Screenshot from 2024-02-18 19-32-22.png")
-![Nvim screenshot4]("./images/Screenshot from 2024-02-18 19-34-25.png")
+![Nvim screenshot2](https://github.com/AndrewKohn/nvim-config/blob/main/images/Screenshot%20from%202024-02-18%2018-34-57.png)
+![Nvim screenshot3](https://github.com/AndrewKohn/nvim-config/blob/main/images/Screenshot%20from%202024-02-18%2019-32-22.png)
+![Nvim screenshot4](https://github.com/AndrewKohn/nvim-config/blob/main/images/Screenshot%20from%202024-02-18%2019-34-25.png)
