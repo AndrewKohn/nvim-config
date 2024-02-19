@@ -1,6 +1,6 @@
 # nvim-config
 
-![nvim dashboard](https://github.com/AndrewKohn/nvim-config/blob/main/images/Screenshot%from%2024-02-19%09-31-56.png)
+![nvim dashboard](https://github.com/AndrewKohn/nvim-config/blob/main/images/Screenshot%20from%202024-02-19%2009-31-56.png)
 
 ### Table of Contents
 
