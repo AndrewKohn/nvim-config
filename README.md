@@ -1,6 +1,6 @@
 # nvim-config
 
-![nvim screenshot1](https://github.com/AndrewKohn/nvim-config/blob/main/images/Screenshot%20from%202024-02-18%2018-34-15.png)
+![nvim dashboard](https://github.com/AndrewKohn/nvim-config/blob/main/images/Screenshot%from%2024-02-19%09-31-56.png)
 
 ### Table of Contents
 
@@ -96,6 +96,18 @@ Plugins may have dependencies that will be automatically downloaded in order to 
 
 ## Showcase
 
+###### Sample diagnostics info/comment highlighting
+
+![nvim screenshot1](https://github.com/AndrewKohn/nvim-config/blob/main/images/Screenshot%20from%202024-02-18%2018-34-15.png)
+
+###### Nvim-tree opened
+
 ![Nvim screenshot2](https://github.com/AndrewKohn/nvim-config/blob/main/images/Screenshot%20from%202024-02-18%2018-34-57.png)
+
+###### Vertical diff
+
 ![Nvim screenshot3](https://github.com/AndrewKohn/nvim-config/blob/main/images/Screenshot%20from%202024-02-18%2019-32-22.png)
+
+###### Telescope file results
+
 ![Nvim screenshot4](https://github.com/AndrewKohn/nvim-config/blob/main/images/Screenshot%20from%202024-02-18%2019-34-25.png)
