@@ -57,7 +57,6 @@ Plugins may have dependencies that will be automatically downloaded in order to 
 | [autoclose](https://github.com/m4xshen/autoclose.nvim)                     | auto pair/close brackets                               | ✅      |
 | [colorizer](https://github.com/norcalli/nvim-colorizer.lua)                | color highlighter                                      | ✅      |
 | [comment](https://github.com/numToStr/Comment.nvim)                        | easy file commenting                                   | ✅      |
-| [conform](https://github.com/stevearc/conform.nvim)                        | format on save                                         | ✅      |
 | [deadcolumn](https://github.com/Bekaboo/deadcolumn.nvim)                   | gradually shows colorcolumn >=80 characters            | ✅      |
 | [fidget](https://github.com/j-hui/fidget.nvim)                             | lsp progress ui                                        | ✅      |
 | [fugitive](https://github.com/tpope/vim-fugitive)                          | git                                                    | ✅      |
@@ -84,6 +83,9 @@ Plugins may have dependencies that will be automatically downloaded in order to 
 | [undotree](https://github.com/mbbill/undotree)                             | undo history visualizer                                | ✅      |
 | [which-key](https://github.com/folke/which-key.nvim)                       | displays popup of possible keymaps                     | ❌      |
 | [zen-mode](https://github.com/folke/zen-mode.nvim)                         | focused code production, hides most features           | ✅      |
+
+<!--- --------------------------------------------------------------- Removed plugins ----------------------------------------------------------------- --->
+<!--- | [conform](https://github.com/stevearc/conform.nvim)                        | format on save                                         | ✅      | --->
 
 - `sonokai` : `kanagawa-dragon` is the default colorscheme. Use `:colorscheme sonokai` to enable.
 - `which-key` : uncomment code in `lua/which-key` to enable. Nice way to show keymaps w/o going into the keymap.lua file, especially if coming back from vscode/intellij.
