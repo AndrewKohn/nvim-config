@@ -74,7 +74,7 @@ vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle, { desc = "Undotree: tog
 -----------------------------------------------------------
 -- vim-fugitive
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git, { desc = "Fugitive: git" })
-vim.keymap.set("n", "<leader>ds", vim.cmd.Gvdiffsplit, { desc = "Fugitive: vertical split" })
+vim.keymap.set("n", "<leader>dv", vim.cmd.Gvdiffsplit, { desc = "Fugitive: vertical split" })
 
 -----------------------------------------------------------
 -- neoscroll
@@ -84,8 +84,8 @@ require("neoscroll").setup({
 })
 
 local t = {}
-t["<C-[>"] = { "scroll", { "-vim.wo.scroll", "true", "250" } }
-t["<C-]>"] = { "scroll", { "vim.wo.scroll", "true", "250" } }
+t["<C-k>"] = { "scroll", { "-vim.wo.scroll", "true", "250" } }
+t["<C-j>"] = { "scroll", { "vim.wo.scroll", "true", "250" } }
 
 require("neoscroll.config").set_mappings(t)
 
