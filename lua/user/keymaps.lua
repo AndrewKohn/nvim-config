@@ -30,3 +30,11 @@ vim.keymap.set(
 
 -- code actions
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Vim: code actions" })
+
+-- Organize imports (js/ts)
+vim.keymap.set("n", "<leader>oi", function()
+	vim.lsp.buf.execut_command({
+		command = "_typescript.organizeImports",
+		arguments = { vim.fn.expand("%:p") },
+	})
+end, { desc = "Typescript: Organize imports" })
