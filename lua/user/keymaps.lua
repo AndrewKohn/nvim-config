@@ -1,4 +1,4 @@
--- NOTE: Global vim keymaps
+-- NOTE : Global vim keymaps
 
 -- MODES
 -- normal_mode = "n",
@@ -33,8 +33,11 @@ vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Vim: code a
 
 -- Organize imports (js/ts)
 vim.keymap.set("n", "<leader>oi", function()
-	vim.lsp.buf.execut_command({
+	vim.lsp.buf.execute_command({
 		command = "_typescript.organizeImports",
 		arguments = { vim.fn.expand("%:p") },
 	})
 end, { desc = "Typescript: Organize imports" })
+
+-- diagnostic float on cursor
+vim.cmd([[autocmd CursorMoved * lua vim.diagnostic.open_float()]])
