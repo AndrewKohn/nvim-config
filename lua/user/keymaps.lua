@@ -22,10 +22,10 @@ vim.keymap.set("n", "N", "Nzzzv", { desc = "Vim: go to next search" })
 
 -- Allows replacing the word (eg. variable) and changes all instances within the file
 vim.keymap.set(
-	"n",
-	"<leader>s",
-	":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>",
-	{ desc = "Vim: refactor variable" }
+    "n",
+    "<leader>s",
+    ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>",
+    { desc = "Vim: refactor variable" }
 )
 
 -- code actions
@@ -33,11 +33,14 @@ vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Vim: code a
 
 -- Organize imports (js/ts)
 vim.keymap.set("n", "<leader>oi", function()
-	vim.lsp.buf.execute_command({
-		command = "_typescript.organizeImports",
-		arguments = { vim.fn.expand("%:p") },
-	})
+    vim.lsp.buf.execute_command({
+        command = "_typescript.organizeImports",
+        arguments = { vim.fn.expand("%:p") },
+    })
 end, { desc = "Typescript: Organize imports" })
 
 -- diagnostic float on cursor
-vim.cmd([[autocmd CursorMoved * lua vim.diagnostic.open_float()]])
+-- vim.cmd([[autocmd CursorMoved * lua vim.diagnostic.open_float()]])
+vim.keymap.set("n", "<leader>te", function()
+    vim.diagnostic.open_float()
+end)
