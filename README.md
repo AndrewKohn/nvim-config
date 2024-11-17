@@ -26,7 +26,7 @@ Update these plugins to match your colorscheme.
 
 ## Requirements
 
-- `neovim` : `v0.10.0` or greater
+- `neovim` : `v0.10.2` (lazy will break with v0.11. This is fine...for now)
 - `repgrip`
 - `hack nerd font` : to enable proper icon displays
 - `:checkhealth` : to find other missing dependencies
