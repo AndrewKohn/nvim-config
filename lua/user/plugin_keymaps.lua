@@ -78,17 +78,25 @@ vim.keymap.set("n", "<leader>dv", vim.cmd.Gvdiffsplit, { desc = "Fugitive: verti
 
 -----------------------------------------------------------
 -- neoscroll
-require("neoscroll").setup({
+local neoscroll = require("neoscroll")
+neoscroll.setup({
 	easing_function = "quadratic",
 	mappings = { "zt", "zz", "zb" },
 })
 
-local t = {}
-t["<C-k>"] = { "scroll", { "-vim.wo.scroll", "true", "250" } }
-t["<C-j>"] = { "scroll", { "vim.wo.scroll", "true", "250" } }
+local modes = { "n", "v", "x" }
+local keymap = {
+	["<C-k>"] = function()
+		neoscroll.ctrl_u({ duration = 250, easing = "quadratic" })
+	end,
+	["<C-j>"] = function()
+		neoscroll.ctrl_d({ duration = 250, easing = "quadratic" })
+	end,
+}
 
-require("neoscroll.config").set_mappings(t)
-
+for key, func in pairs(keymap) do
+	vim.keymap.set(modes, key, func)
+end
 -----------------------------------------------------------
 -- gitsigns
 vim.keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", {
